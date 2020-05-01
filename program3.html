@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Øvelseseksamensspørgsmål 3</title>
+
+  </head>
+  <body>
+
+    <script>
+    var str = "dddhhhhvnnnnshdjelmp";
+    var results = [""];
+    var substring = "";
+
+    //str.length beskriver bare længden af min string.
+    for (var i = 0; i < str.length; i++) {
+         //includes, tjekker om et bestemt symbol findes i ens string.
+        if(substring.includes(str[i])) {
+            //indexOf, finder det punkt hvor det bestemte symbol opstår.
+            substring = substring
+                .slice(
+                    substring.indexOf(str[i]) + 1,
+                    substring.length-1
+                );
+
+        }
+        substring += str[i];
+
+        if(substring.length > results[0].length) {
+            results = [substring];
+        }
+        else if(substring.length === results[0].length) {
+            results.push(substring);
+        }
+        
+        console.log(substring)
+    }
+
+    console.log(results);
+
+
+    </script>
+
+  </body>
+</html>
+
+<!--Skriv en algoritme, der kan finde den længste substring i en string, uden gentagende symboler.
+F.eks. i "ssssiiiiiimoonhfdsak" vil svaret være "onhfdsak".-->
