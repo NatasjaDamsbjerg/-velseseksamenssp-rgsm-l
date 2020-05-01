@@ -24,10 +24,12 @@
 
         }
         substring += str[i];
-
+        //Tjekker om min substring er længere end det der ligger i results.
         if(substring.length > results[0].length) {
+            //Hvis den er det, så vil substring bliver placeret i results.
             results = [substring];
         }
+        //Denne linje bliver sprunget over hvis det første if-statement er true.
         else if(substring.length === results[0].length) {
             results.push(substring);
         }
