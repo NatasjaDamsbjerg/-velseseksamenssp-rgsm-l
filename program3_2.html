@@ -1,0 +1,71 @@
+<!--En mere "fra bunden" metode at løse opgave 3 på-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Øvelseseksamensspørgsmål 3</title>
+
+  </head>
+  <body>
+
+    <script>
+    var data = "dddhhhhvnnnnshdjelmp";
+    var results = [""];
+    var substring = "";
+
+    //str.length beskriver bare længden af min string.
+    for (var i = 0; i < data.length; i++) {
+         //Kalder function includes. 
+        if(includes(substring, data[i])) {
+            //Kalder function indexOf.
+            substring = substring
+                .slice(
+                    indexOf(substring, data[i]) + 1,
+                    substring.length
+                );
+
+        }
+        substring += data[i];
+
+        //Tjekker om min substring er længere end det der ligger i results.
+        if(substring.length > results[0].length) {
+            //Hvis den er det, så vil substring bliver placeret i results.
+            results = [substring];
+        }
+        //Denne linje bliver sprunget over hvis det første if-statement er true.
+        else if(substring.length === results[0].length) {
+            results = push(results, substring);
+        }
+        
+        console.log(substring)
+    }
+
+    console.log(results);
+
+    //function includes, tjekker om et bestemt symbol findes i ens string.
+    function includes(array, symbol) {
+        for (var s of array) {
+            if(s === symbol)
+                return true;
+        }
+        return false;
+    }
+
+    //function indexOf, finder det punkt hvor det bestemte symbol opstår.
+    function indexOf(array, symbol) {
+        for (var i = 0; i < array.length; i++)
+            if(array[i] === symbol)
+                return i;
+    }
+
+    function push(array, data) {
+        array[array.length] = data;
+        return array
+    }
+
+    </script>
+
+  </body>
+</html>
+
+<!--Skriv en algoritme, der kan finde den længste substring i en string, uden gentagende symboler.
+F.eks. i "ssssiiiiiimoonhfdsak" vil svaret være "onhfdsak".-->
