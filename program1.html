@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Øvelseseksamensspørgsmål 1</title>
+
+  </head>
+  <body>
+
+    <script>
+        var arr = [1, 2, 4, 7, 9];
+        var arr2 = [3, 5, 6, 8, 2];
+        var target = 10;
+        var smallestDiff = target - (arr[0] + arr2[0]);
+        if (smallestDiff < 0) {
+                    smallestDiff = smallestDiff * -1;
+                }
+
+        var results = [[arr[0], arr2[0]]];
+
+        for (var i = 0; i < arr.length; i++)
+            console.log(arr[i]);
+
+        for (var num1 of arr) {
+            for (var num2 of arr2) {
+                var sum = num1 + num2;
+                var diff = target - sum;
+                if (diff < 0) {
+                    diff = diff * -1;
+                }
+
+                if (diff < smallestDiff) {
+                    results = [[num1, num2]];
+                    smallestDiff = diff;
+                }
+                else if (diff === smallestDiff){
+                    results.push([num1, num2]);
+                }
+            }
+        }
+
+        console.log(results);
+    
+    </script>
+
+  </body>
+</html>
+
+
+<!--Skriv et program, som der fra to arrays kan finde de sæt*, som er tættest på et bestemt tal.
+*Sættene skal indeholde et tal fra hvert af de to arrays.
+F.eks. vil [[2, 6], [3, 5]] være svaret på arrays [1, 2, 3] og [4, 5, 6] hvor sættene skal være tættest på 8.
+
+Forklar dit svar med et flow-diagram og dokumenter din løsning på et github repository.
+
+Du har en time og alle hjælpemidler er tilladt.-->
