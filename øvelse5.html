@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <script>
+     var result = [];
+     var arr = [3, 14, 12, 37, 21];
+
+     for(var i = 0; i < arr.length; i++){
+         if(arr[i] % 3 === 0 || arr[i] % 7 === 0){
+             result.push(1);
+         }else{
+             result.push(0);
+         }
+     }
+    
+    console.log(result);
+    </script>
+
+  </body>
+</html>
