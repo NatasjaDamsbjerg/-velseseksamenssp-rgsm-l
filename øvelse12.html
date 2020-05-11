@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <script>
+    //Function check, tjekker to parametre (x, y)
+    function check(x, y){
+        //Tjekker om både x og y ligger mellem 20 og 30
+        if(x >= 20 && x <= 30 && y >= 20 && y <= 30){
+            //Tjekker derefter om x er større end y. Hvis ja, retuner x, ellers retuner y.
+            if(x >= y){
+                return x;
+            }else{
+                return y;
+            }
+        //Hvis x og y ikke er mellem 20 og 30, retuner 0.
+        }else{
+            return 0;
+        }
+    }
+
+    console.log(check(78, 95));
+    console.log(check(20, 30));
+    console.log(check(21, 25));
+    console.log(check(28, 28));
+    console.log(check(21, 95));
+
+    //Write a program to find the larger value from two 
+    //positive integer values that is in the range 20..30 
+    //inclusive, or return 0 if neither is in that range.
+    </script>
+
+  </body>
+</html>

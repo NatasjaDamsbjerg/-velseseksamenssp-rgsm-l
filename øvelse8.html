@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <script>
+    //Function test har tre parametre (a, b, c), som der bliver tjekket for.
+    function test(a, b, c){
+        if(a >= 20 && a <= 50 || b >= 20 && b <= 50 || c >= 20 && c <= 50){
+            return true;
+        }
+        return false;
+    }
+
+    console.log(test(10, 20, 30));
+    console.log(test(5, 53, 100));
+    console.log(test(-2, 11, 40));
+
+    //Write a program to check whether three given integer 
+    //values are in the range 20..50 inclusive. Return true 
+    //if 1 or more of them are in the said range otherwise 
+    //return false
+    </script>
+
+  </body>
+</html>

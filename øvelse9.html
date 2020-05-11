@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <script>
+    //Funcion check, tjekker for to parametre (x, y).
+    function check(x, y){
+        //Hvis én af parametrene er mellem 20 og 50; return true. 
+        //Hvis ingene eller begge parametre er mellem 20 og 50; return false.
+        if(((x >= 20 && x <= 50) && (y < 20 || y > 50)) ||
+        ((y >= 20 && y <= 50) && (x < 20 || x > 50))){
+            return true;
+        }
+        return false;
+    }
+
+    console.log(check(25, 40));
+    console.log(check(20, 84));
+    console.log(check(10, 55));
+    console.log(check(10, 40));
+
+    //Write a program to check whether two given integer
+    //values are in the range 20..50 inclusive. Return true 
+    //if 1 or other is in the said range otherwise false.
+    </script>
+
+  </body>
+</html>

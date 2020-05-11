@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <script>
+    //Funcion nearest tjekker to parametre (x, y).
+    function nearest(x, y){
+        var n = 100;
+        var val = x - n;
+        var val2 = y - n;
+
+        //Hvis x eller y er større end n, skal den vende formlen om,
+        //da den ellers vil give det forkerte output under return.
+        if(x > n){
+            val = n - x;
+        }else if(y > n){
+            val2 = n - y;
+        }
+
+        //Hvis tallet tættest på n, eller 0, hvis begge tal er ens.
+        return val == val2 ? 0 : (val < val2 ? y : x);
+    }
+
+    console.log(nearest(78, 95));
+    console.log(nearest(95, 95));
+    console.log(nearest(99, 120));
+
+    //Write a program to check which number nearest to the 
+    //value 100 among two given integers. Return 0 if the 
+    //two numbers are equal.
+    </script>
+
+  </body>
+</html>

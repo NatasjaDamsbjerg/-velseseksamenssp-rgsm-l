@@ -5,19 +5,25 @@
   <body>
 
     <script>
-     var tal1 = [28, 2];
+    //Function check har to parametre (a, b), så den tjekker for parametrene.
+    function check(a, b) {
+      var sum = a + b;
 
-     var sum = tal1[0] + tal1[1];
-     var result;
+      if(sum === 30 || a === 30 || b === 30) {
+        return true;
+      }
+      return false;
+    } 
 
-     if(tal1 === 30 || sum === 30){
-        result = true;
-     }else{
-        result = false;
-     }
+     console.log(check(6, 30));
+     console.log(check(22, 5));
+     console.log(check(7, 23));
+     console.log(check(10, 39));
 
-     console.log(result);
-    
+
+    //Write a C program to check two given integers, 
+    //and return true if one of them is 30 or if their 
+    //sum is 30.
     </script>
 
   </body>
