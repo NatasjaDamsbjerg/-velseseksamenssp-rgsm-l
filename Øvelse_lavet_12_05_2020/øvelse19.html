@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <script>
+    //Retunere true hvis n er multiple 13 eller +1
+    function multiple(n){
+        if(n % 13 === 0 || n % 13 === 1){
+            return true;           
+        }
+        return false;
+    }
+
+    console.log(multiple(26));
+    console.log(multiple(10));
+    console.log(multiple(30));
+    console.log(multiple(14));
+
+    //Retunere 1 hvis x er multiple 13 og 2 hvis x er multiple 13+1
+    function check(x){
+        if(x % 13 === 0){
+            return 1;
+        }else if(x % 13 === 1){
+            return 2;
+        }
+        return false;
+    }
+
+    console.log(check(26));
+    console.log(check(10));
+    console.log(check(30));
+    console.log(check(14));
+    //Write a program to to test whether a given non-negative 
+    //number is a multiple of 13 or it is one more than a 
+    //multiple of 13.
+    </script>
+
+  </body>
+</html>

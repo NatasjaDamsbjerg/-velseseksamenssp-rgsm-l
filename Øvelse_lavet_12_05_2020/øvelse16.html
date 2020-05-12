@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <script>
+    var result = 0;
+    var arr = [1, 2, 3, 3, 3, 4];
+
+    //For hver gang et tal vises tre gange i træk, lægges der 1 til result
+    for(i = 0; i < arr.length; i++){
+        if(arr[i] == arr[i + 1] && arr[i + 2] == arr[i]){
+            result++;
+        }
+    }
+
+    console.log(result);
+
+    //Write a program to check if a triple is presents 
+    //in an array of integers or not. If a value appears 
+    //three times in a row in an array it is called a triple.
+    </script>
+
+  </body>
+</html>
